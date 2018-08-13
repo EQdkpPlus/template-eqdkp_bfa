@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="template" version="2.3.0.17">
+	<folder>eqdkp_bfa</folder>
+	<name>EQdkp BatteForAzeroth</name>
+	<author>Asitara</author>
+	<authorEmail>majsterofdesaster@online.de</authorEmail>
+	<creationDate>1520163450</creationDate>
+	<copyright>(C)2018 Asitara</copyright>
+	<version>0.1.0</version>
+	<level>stable</level>
+</install>
