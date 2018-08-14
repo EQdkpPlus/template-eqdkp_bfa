@@ -150,8 +150,6 @@ h3 { font-size: 14px; margin-bottom: 5px; border-bottom: none; }
 }
 
 #personalAreaTime .personalAreaTime {
-	position: absolute;
-	   right: 190px;
 	margin-top: 14px;
 	color: @eqdkpUserareaFontColor;
 	letter-spacing: -1px;
@@ -166,7 +164,6 @@ h3 { font-size: 14px; margin-bottom: 5px; border-bottom: none; }
 
 #personalAreaTime #search_form input {
 	background-color: rgba(0, 0, 0, 0.6);
-	border: 1px solid #49653D;
 	border-radius: 4px 4px 4px 4px;
 	color: @eqdkpUserareaLinkColor;
 	height: 20px;
@@ -183,29 +180,15 @@ h3 { font-size: 14px; margin-bottom: 5px; border-bottom: none; }
 
 #personalAreaTime button, #personalAreaTime button:hover {
 	position: absolute;
-		 top: -3px;
-	   right: -12px;
+	top: -3px;
+	right: -12px;
 	background: none repeat scroll 0 0 transparent !important;
 	border: medium none;
 	cursor:pointer;
 	box-shadow: none;
+	color: @eqdkpUserareaFontColor;
 }
 
-#loginarea_search {
-	width: 45px !important;
-	transition: width		 0.5s ease-in-out,
-				color		 0.5s ease 0s,
-				border-color   1s ease 0s;
-}
-#personalAreaTime .search_button {
-	width: 25px;
-	opacity: 0;
-	transition: opacity 1s ease-in;
-}
-#loginarea_search:hover,
-#loginarea_search:focus { width: 120px !important; }
-#loginarea_search:hover ~ .search_button,
-#loginarea_search:focus ~ .search_button { opacity: 1; }
 
 
 /* Footer
@@ -536,8 +519,8 @@ h3 { font-size: 14px; margin-bottom: 5px; border-bottom: none; }
 
 /* Menus
 ****************************************/
-#mainmenu {
-	background: url('@{eqdkpTemplateImagePath}navbar-light-middle.png') repeat-x scroll center center / auto 70px transparent;
+#mainmenu, #adminmenu {
+	background: url('@{eqdkpTemplateImagePath}navbar-light-middle-admin.png') repeat-x scroll center center / auto 70px transparent;
 	position: relative;
 	margin: 0 70px;
 	padding: 10px 0;
@@ -560,7 +543,7 @@ h3 { font-size: 14px; margin-bottom: 5px; border-bottom: none; }
 	&:after {
 		background: url('@{eqdkpTemplateImagePath}navbar-light-right.png') no-repeat scroll center center / auto 70px transparent;
 		right: 0;
-		margin-right: -70px;
+		margin-right: -69px;
 	}
 }
 
@@ -656,12 +639,10 @@ body:not(.admin) ul.mainmenu { margin-bottom: .3em; }
 
 
 // adminmenu
+
 ul.adminmenu {
 	width: 100%;
 	margin-bottom: .3em;
-	border-top-left-radius: 45px 75%;
-	border-top-right-radius: 45px 75%;
-	box-shadow: 0px 0px 5px 5px rgb(0, 0, 0), 0px 0px 0px 150px rgb(0, 0, 0) inset;
 	font-size: 14px;
 }
 ul.adminmenu li { position: relative; }
@@ -680,9 +661,9 @@ ul.adminmenu:hover > li { opacity: .5; }
 ul.adminmenu > li:hover { opacity: 1; }
 
 ul.adminmenu a,
-ul.adminmenu a:visited { display: block; padding: .5em 1em; text-shadow: none; }
+ul.adminmenu a:visited { display: block; padding: .75em 1em; color: @eqdkpMenuFontColor; }
 ul.adminmenu li li a,
-ul.adminmenu li li a:visited { color: @eqdkpMenuItemFontColorHover; }
+ul.adminmenu li li a:visited { color: @eqdkpMenuItemFontColorHover; text-shadow: none; }
 ul.adminmenu li li:hover > a { color: lighten(@eqdkpMenuItemFontColorHover, 35.5); }
 
 ul.adminmenu ul.sub-menu {
@@ -1398,28 +1379,28 @@ div[aria-describedby="dialog-login"] .password-forgot{
 }
 
 .infobox-large {
-	padding: 10px;
 	border-radius: 2px;
+	padding: 10px;
 }
 
 .infobox-blue {
-	color: #00AEFF;
-	border:1px solid #00AEFF;
-	background-color: rgba(0, 62, 92, 0.5);
-	box-shadow: 0px 0px 10px 8px rgba(0, 174, 255, 0.4);
+	background-color: #D9EDF7;
+	color: #3A87AD;
+	border-color: #3A87AD;
 }
+
 .infobox-red {
-	color: #FF0500;
-	border:1px solid #FF0500;
-	background-color: rgba(80, 0, 0, 0.5);
-	box-shadow: 0px 0px 10px 8px rgba(255, 5, 0, 0.4);
+	background-color: #F2DEDE;
+	color: #B94A48;
+	border-color: #B94A48;
 }
+
 .infobox-green {
-	color: #3F0;
-	border:1px solid #3F0;
-	background-color: rgba(10, 75, 0, 0.5);
-	box-shadow: 0px 0px 10px 8px rgba(51, 255, 0, 0.4);
+	background-color: #DFF0D8;
+	color: #468847;
+	border-color: #468847;
 }
+
 .infobox-opacgrey {
 	background: rgba(0, 0, 0, 0.2);
 	color: #000000;
@@ -1535,9 +1516,36 @@ hr#system-readmore {
 }
 .admin .breadcrumb { border-radius:0; }
 
+.breadcrumb-container {
+	background: url('@{eqdkpTemplateImagePath}nav-m.png') repeat-x scroll center center / auto 50px transparent;
+	position: relative;
+	margin: 0 20px;
+	padding: 10px 0;
+	
+	&:before,
+	&:after {
+		display: block;
+		content:'';
+		height: 100%;
+		width: 30px;
+		position:absolute;
+		top: 0;
+		bottom: 0;
+	}
+	&:before {
+		background: url('@{eqdkpTemplateImagePath}nav-l.png') no-repeat scroll center center / auto 50px transparent;
+		left: 0;
+		margin-left: -20px;
+	}
+	&:after {
+		background: url('@{eqdkpTemplateImagePath}nav-r.png') no-repeat scroll center center / auto 50px transparent;
+		right: 0;
+		margin-right: -20px;
+	}
+}
+
 ul.breadcrumb {
 	color: darken(@eqdkpBodyLinkColor, 20);
-	background: rgba(0,0,0,.5);
 	padding: 3px;
 	overflow: hidden;
 	width: 100%;
@@ -1552,18 +1560,14 @@ ul.breadcrumb a {
 	height: 16px;
 	color: darken(@eqdkpBodyLinkColor, 20);
 	font-size: 12px;
-	font-family: Georgia,"Palatino Linotype",Times,serif;
 	text-decoration: none;
 }
 
 ul.breadcrumb li:first-child a {
 	width: 16px;
-	background: url('@{eqdkpTemplateImagePath}hearthstone.png') no-repeat scroll ~"1em 0em / 16px auto" transparent;
+	background: url('@{eqdkpTemplateImagePath}Icon-wow-ocho.png') no-repeat scroll ~"1em 0em / 16px auto" transparent;
 }
-ul.breadcrumb li:first-child a:hover {
-	background: url('@{eqdkpTemplateImagePath}hearthstone.png') no-repeat scroll ~"1em 0em / 16px auto",
-				radial-gradient(rgb(0, 219, 255) 10%, rgba(0, 219, 255, 0.3) 65%, transparent 100%) repeat scroll 0% 0% transparent;
-}
+
 ul.breadcrumb li:first-child a i { display:none; }
 
 ul.breadcrumb li:last-child a::after { display:none; }
