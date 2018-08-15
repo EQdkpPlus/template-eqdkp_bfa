@@ -114,6 +114,7 @@ h3 { font-size: 14px; margin-bottom: 5px; border-bottom: none; }
 	background: url('@{eqdkpTemplateImagePath}navbar-header.png') no-repeat scroll ~"center top / 100% 50px" transparent;
 	color: @eqdkpUserareaFontColor;
 	text-align:left;
+	font-size: 0.9em;
 }
 #personalArea a {
 	color: @eqdkpUserareaLinkColor;
@@ -152,7 +153,6 @@ h3 { font-size: 14px; margin-bottom: 5px; border-bottom: none; }
 #personalAreaTime .personalAreaTime {
 	margin-top: 14px;
 	color: @eqdkpUserareaFontColor;
-	letter-spacing: -1px;
 	z-index: 1;
 }
 
@@ -710,7 +710,7 @@ ul.adminmenu ul.sub-menu li:hover > .sub-menu-arrow:after { border-left-color: l
 	top: 50%;
 	right: .5em;
 	border: 5px solid transparent;
-	border-top-color: rgba(255, 255, 255, 0.5);
+	border-top-color: #333333;
 }
 .btn-ddm > ul {
 	display: none;
@@ -1097,7 +1097,7 @@ select[readonly], textarea[readonly], input[type="text"][readonly], input[type="
 		font-family:'Trebuchet MS',Arial,sans-serif;
 	}
 	th a:hover {
-		color: #13FF29;
+		color: @eqdkpContentFontColorHeadings;
 	}
 	th.footer {
 		font-style:italic;
@@ -1286,7 +1286,7 @@ input.ui-spinner-input, input.ui-spinner-input:focus, input.ui-spinner-input:hov
 .up_arrow_red:before {
 	content:"\f0d8";
 	font-family: FontAwesome;
-	color: #13FF29;
+	color:  @eqdkpContentFontColorHeadings;
 	font-size: 18px;
 	margin-right: 2px;
 }
@@ -1307,7 +1307,7 @@ input.ui-spinner-input, input.ui-spinner-input:focus, input.ui-spinner-input:hov
 .down_arrow_red:before{
 	content:"\f0d7";
 	font-family: FontAwesome;
-	color: #13FF29;
+	color:  @eqdkpContentFontColorHeadings;
 	font-size: 18px;
 	margin-right: 2px;
 }
@@ -3330,20 +3330,16 @@ button#cboxPrevious, button#cboxNext, button#cboxClose, button#cboxSlideshow {
 	padding: 4px 14px;
 	line-height: 11px;
 	display: inline-block;
-	color: #F7FAE5;
+	color: @eqdkpContentBackgroundColor;
 	font-size: 13px;
 	text-shadow: none !important;
-	border: 1px solid #388A15;
-	border-top-left-radius: 25px 100%;
-	border-bottom-right-radius: 25px 100%;
-	background: none repeat scroll 0 0 rgba(56, 138, 21, 0.6);
+	border: 1px solid @eqdkpContentBackgroundColor;
+	background-color: @eqdkpContentAccentColor;
 	vertical-align: middle;
 	white-space: nowrap;
+	border-radius: 3px;
 }
-.user-groups a:hover {
-	color: #FFF;
-	box-shadow: 0px 0px 5px 1px rgba(56, 138, 21, 0.75);
-}
+
 
 .user-profile .boxHeader {
 	display: none;
@@ -4300,6 +4296,7 @@ label.isBoolean > .green {
     font-family: Tahoma,Arial,Verdana,sans-serif;
     margin: 0px;
 }
+
 label.isBoolean > .green { margin-left: -5px !important; }
 
 label.isBoolean > input[type="radio"]:checked + span.red,
