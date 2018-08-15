@@ -75,7 +75,7 @@ h1, h2, h3 {
 	font-weight: 400;
 	margin-bottom: 10px;
 	padding-bottom: 5px;
-	border-bottom: 1px solid #666;
+	border-bottom: 1px solid @eqdkpContentBorderColor;
 	margin-top: 5px;
 }
 h1 { font-size: 20px; }
@@ -475,16 +475,16 @@ h3 { font-size: 14px; margin-bottom: 5px; border-bottom: none; }
 .portalbox {
 	margin: 5px 5px 14px;
 	padding: 1px;
-	border: 1px solid rgba(19, 255, 41, 0.2);
+	border: 1px solid @eqdkpContentBorderColor;
 	
 	&:hover .portal_fe_edit {
 		display: inline;
 	}
 	
 	&_head {
-		border-bottom: 1px solid rgba(19, 255, 41, 0.2);
+		border-bottom: 1px solid @eqdkpContentBorderColor;
 		padding: 5px 2px 5px 2px;
-		color: #E8E361;
+		color: @eqdkpContentFontColorHeadings;
 		font-size: 16px;
 		font-weight: bold;
 		letter-spacing: .03em;
@@ -494,7 +494,7 @@ h3 { font-size: 14px; margin-bottom: 5px; border-bottom: none; }
 		float: right;
 		margin-top: -2px;
 		padding-right: 5px;
-		color: rgba(170, 170, 170, 0.5);
+		color: @eqdkpContentBorderColor;
 	}
 	&_content {
 		padding: 5px;
@@ -811,24 +811,23 @@ a:hover {
 /* Inputs
 ****************************************/
 select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
-	color: #CEC5AF;
+	color: @eqdkpInputFontColor;
 	font-size: 13px;
 	line-height: 20px;
 	padding: 4px 6px;
 	vertical-align: middle;
-	background-color: #333;
-	border: 1px solid #666;
+	background-color: @eqdkpInputBackgroundColor;
+	border: 1px solid @eqdkpInputBorderColor;
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
 	transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
-	font-family: Tahoma,Arial,Verdana,sans-serif;
 	margin: 3px;
 }
 
 select:hover, textarea:hover, input:hover, select:focus, textarea:focus, input:focus {
-	color: #FFF;
-	border-color: #13FF29;
-	background-color: #555;
-	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px rgba(19, 255, 41, 0.75);
+	color: @eqdkpInputFontColorActive;
+	border-color: @eqdkpInputBorderColorActive;
+	background-color: @eqdkpInputBackgroundColorActive;
+	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px fade(@eqdkpInputBorderColorActive, 75);
 	outline: 0 none;
 }
 
@@ -1185,7 +1184,7 @@ select[readonly], textarea[readonly], input[type="text"][readonly], input[type="
 /* Fieldsets
 ****************************************/
 fieldset.settings legend {
-	border-bottom: 1px solid #CCCCCC;
+	border-bottom: 1px solid @eqdkpContentBorderColor;
 	font-family: 'Trebuchet MS',Arial,sans-serif;
 	font-size: 18px;
 	font-weight: bold;
@@ -1210,14 +1209,14 @@ fieldset.settings dt {
 	width: 55%;
 	text-align: left;
 	border: none;
-	border-right: 1px solid #CCCCCC;
+	border-right: 1px solid @eqdkpContentBorderColor;
 	padding-top: 3px;
 }
 fieldset.settings dd {
 	margin: 0 0 0 55%;
 	padding: 0 0 0 5px;
 	border: none;
-	border-left: 1px solid #CCCCCC;
+	border-left: 1px solid @eqdkpContentBorderColor;
 	vertical-align: middle;
 	font-size: 1.00em;
 	text-align: left;
@@ -1252,10 +1251,10 @@ fieldset.settings dl:after {
 }
 
 fieldset.settings dl:hover dt{
-	border-right: 1px solid #000;
+	border-right: 1px solid lighten(@eqdkpContentBorderColor, 20);
 }
 fieldset.settings dl:hover dd{
-	border-left: 1px solid #000;
+	border-left: 1px solid lighten(@eqdkpContentBorderColor, 20);
 }
 fieldset.settings dt label {
 	font-size: 1.1em;
@@ -1266,7 +1265,7 @@ fieldset.settings dd label {
 	margin: 0 10px 0 0;
 }
 fieldset.settings dt span {
-	color: #666;
+	color: lighten(@eqdkpContentBorderColor, 20);
 }
 
 img {
@@ -1653,16 +1652,14 @@ ul.breadcrumb .current::before {
 /* ACP: admin menu - update available badge
 ****************************************/
 .update_available {
-	margin-left: 6px;
-	padding: 0 9px;
+	border-radius: 3px;
+	padding: 3px 7px;
+	margin: -3px 0 -3px 8px;
 	display: inline-block;
-	line-height: 20px;
-	color: #FFF;
+	color: #000;
 	font-size: 11px;
 	font-weight: bold;
 	border: 1px solid #FF0500;
-	border-top-left-radius: 50px 100%;
-	border-bottom-right-radius: 50px 100%;
 	background-color: rgba(255, 5, 0, 0.3);
 	text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
 	vertical-align: baseline;
@@ -1673,16 +1670,14 @@ ul.breadcrumb .current::before {
 /* ACP: admin menu - update available badge
 ****************************************/
 .update_available_yellow {
-	margin-left: 6px;
-	padding: 0 9px;
+	border-radius: 3px;
+	padding: 3px 7px;
+	margin: -3px 0 -3px 8px;
 	display: inline-block;
-	line-height: 20px;
-	color: #FFF;
+	color: #000;
 	font-size: 11px;
 	font-weight: bold;
 	border: 1px solid #FFBD00;
-	border-top-left-radius: 50px 100%;
-	border-bottom-right-radius: 50px 100%;
 	background-color: rgba(255, 189, 0, 0.3);
 	text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
 	vertical-align: baseline;
@@ -2512,7 +2507,7 @@ div.error { display: none; }
 .news_author {
 	margin-top: 4px;
 	margin-bottom: 10px;
-	color: #999;
+	color: lighten(@eqdkpContentBorderColor, 20);
 }
 
 .article_content{
@@ -2819,8 +2814,7 @@ a.tool-item {
 	color: #FFF;
 	font-size: 11px;
 	border: 1px solid #FF0500;
-	border-top-left-radius: 50px 100%;
-	border-bottom-right-radius: 50px 100%;
+	border-radius: 3px;
 	background-color: rgba(255, 5, 0, 0.3);
 	text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
 	vertical-align: baseline;
@@ -2834,8 +2828,7 @@ a.tool-item {
 	color: #FFF;
 	font-size: 11px;
 	border: 1px solid #FFBD00;
-	border-top-left-radius: 50px 100%;
-	border-bottom-right-radius: 50px 100%;
+	border-radius: 3px;
 	background-color: rgba(255, 189, 0, 0.3);
 	text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
 	vertical-align: baseline;
@@ -2850,8 +2843,7 @@ a.tool-item {
 	color: #FFF;
 	font-size: 11px;
 	border: 1px solid #3F0;
-	border-top-left-radius: 50px 100%;
-	border-bottom-right-radius: 50px 100%;
+	border-radius: 3px;
 	background-color: rgba(50, 255, 0, 0.3);
 	text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
 	vertical-align: baseline;
@@ -4025,12 +4017,13 @@ li.prio_2 { border-left: 4px solid #FF0500; }
 .bubble-red.filtered    { background-color: transparent !important; }
 
 .bubble {
-  background-color: fade(#00950e, 30);
-  border-radius: 9px;
-  color: #fff;
+  background-color: @eqdkpContentAccentColor;
+  border-radius: 3px;
+  color: @eqdkpContentBackgroundColor;
   display: inline-block;
   font-size: .70rem;
-  padding: 4px 10px 4px;
+  font-weight: 700;
+  padding: 4px 6px 4px;
   position: relative;
   text-shadow: none !important;
   vertical-align: middle;
@@ -4129,7 +4122,7 @@ button.thirdpartylogin.discord {
 .bigDateContainer {
 	text-align: center;
 	width: 100px;
-	border-right: 1px solid #666;
+	border-right: 1px solid @eqdkpContentBorderColor;
 	margin-right: 12px;
 	display: block;
 	position: relative;

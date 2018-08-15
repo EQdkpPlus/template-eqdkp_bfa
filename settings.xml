@@ -15,7 +15,7 @@
 	
 	<body_background_color>rgb(16, 8, 5)</body_background_color>
 	<body_font_color>rgb(255, 255, 255)</body_font_color>
-	<body_font_size>12</body_font_size>
+	<body_font_size>14</body_font_size>
 	<body_font_family>'Open Sans', Arial, Helvetica, sans-serif</body_font_family>
 	<body_link_color>rgb(237, 224, 201)</body_link_color>
 	<body_link_color_hover>rgb(255, 255, 255)</body_link_color_hover>
@@ -28,7 +28,7 @@
 	<content_font_color_headings>#d4b47d</content_font_color_headings>
 	<content_link_color>rgb(237, 224, 201)</content_link_color>
 	<content_link_color_hover>rgb(255, 255, 255)</content_link_color_hover>
-	<content_border_color>rgb(139, 131, 112)</content_border_color>
+	<content_border_color>#666</content_border_color>
 	<content_accent_color>#c76700</content_accent_color>
 	<content_contrast_color>#fff</content_contrast_color>
 	<content_contrast_background_color>#271d14</content_contrast_background_color>
@@ -68,12 +68,12 @@
 	<button_font_color_hover>rgb(0, 0, 0)</button_font_color_hover>
 	<button_border_color_hover>#807768</button_border_color_hover>
 	
-	<input_background_color></input_background_color>
-	<input_border_color></input_border_color>
-	<input_font_color></input_font_color>
-	<input_background_color_active></input_background_color_active>
-	<input_border_color_active></input_border_color_active>
-	<input_font_color_active></input_font_color_active>
+	<input_background_color>#333</input_background_color>
+	<input_border_color>#666</input_border_color>
+	<input_font_color>#d4b47d</input_font_color>
+	<input_background_color_active>#555</input_background_color_active>
+	<input_border_color_active>#d4b47d</input_border_color_active>
+	<input_font_color_active>#fff</input_font_color_active>
 	
 	<misc_color1></misc_color1>
 	<misc_color2></misc_color2>
