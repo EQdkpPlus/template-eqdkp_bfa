@@ -23,6 +23,7 @@
 		<!-- LISTENER head -->
 		<style type="text/css">
 			{CSS_CODE}
+			
 			<!-- IF T_BACKGROUND_TYPE != 0 -->
 			body {
 				background:#000000 url('{TEMPLATE_BACKGROUND}') no-repeat center top;
@@ -34,31 +35,10 @@
 		<script type="text/javascript">
 			//<![CDATA[
 			{JS_CODE}
-			
-			<!-- IF S_NORMAL_HEADER and T_BACKGROUND_TYPE == 0 and T_BACKGROUND_POSITION == 'scroll' and not S_IN_ADMIN -->
-			// Background Video -- To disable, set the Background position to fixed in ACP: Style Management
-			$(function(){
-				if($(window).width() >= 1200){
-					var html_bg_video  = '<video preload="auto" autoplay="true" muted="muted" loop="loop" playsinline="playsinline">';
-						html_bg_video += '	<source src="{TEMPLATE_PATH}/videos/background.mp4" type="video/mp4">';
-						html_bg_video += '</video>';
-					
-					$('#bg-video-wrapper').html(html_bg_video);
-					$('#bg-video-wrapper video').on('canplaythrough', function(){
-						if ($(this).css("opacity") != 1) {
-							$(this).delay(100).fadeTo(4000, 1);
-						}
-					});
-				}else{
-					$('#bg-video-wrapper').hide();
-				}
-			});
-			<!-- ENDIF -->
 			//]]>
 		</script>
 	</head>
 	<body id="top" data-template="{TEMPLATE_CLASS}" class="<!-- IF S_REPONSIVE -->responsive <!-- ENDIF --><!-- IF not S_NORMAL_HEADER -->simple-header<!-- ENDIF --> {BROWSER_CLASS}<!-- IF T_PORTAL_WIDTH --> fixed_width<!-- ENDIF --><!-- IF S_IN_ADMIN --> admin<!-- ELSE --> frontend<!-- ENDIF -->  {BODY_CLASS}">
-		<div id="bg-video-wrapper"></div>
 		<!-- LISTENER body_top -->
 		
 		{STATIC_HTMLCODE}

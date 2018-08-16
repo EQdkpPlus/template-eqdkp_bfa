@@ -62,7 +62,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 ****************************************/
 html { min-height: 100%; }
 body {
-	background: url('@{eqdkpBackgroundImage}') no-repeat scroll ~"center -400px / 100% auto" @eqdkpBodyBackgroundColor;
+	background: url('@{eqdkpBackgroundImage}') no-repeat scroll ~"center -300px / 100% auto" @eqdkpBodyBackgroundColor;
 	color: @eqdkpBodyFontColor;
 	text-align: center;
 	font-size: @eqdkpBodyFontSize;
@@ -81,28 +81,6 @@ h1, h2, h3 {
 h1 { font-size: 20px; }
 h2 { font-size: 18px; }
 h3 { font-size: 14px; margin-bottom: 5px; border-bottom: none; }
-
-#bg-video-wrapper {
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	overflow: hidden;
-	z-index: -100;
-}
-#bg-video-wrapper video {
-	display: block;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%,-50%);
-	height: auto;
-	width: auto;
-	min-height: 100%;
-	min-width: 100%;
-	opacity: 0;
-}
 
 
 /* Personal Area
@@ -491,7 +469,6 @@ h3 { font-size: 14px; margin-bottom: 5px; border-bottom: none; }
 .portalbox {
 	margin: 5px 5px 14px;
 	padding: 1px;
-	border: 1px solid @eqdkpContentBorderColor;
 	
 	&:hover .portal_fe_edit {
 		display: inline;
