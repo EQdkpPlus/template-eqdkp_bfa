@@ -366,7 +366,13 @@
 				</div>
 			</div>
 			
-			<footer id="contentFooter">
+		</section>
+		
+		
+	</div><!-- close wrapper -->
+	
+	<footer id="footer">
+				<footer id="contentFooter">
 				<!-- LISTENER content-footer-top -->
 				<div class="floatLeft">
 					<!-- IF S_REPONSIVE -->
@@ -395,16 +401,14 @@
 					</div>
 					<!-- ENDIF -->
 				</div>
+				<div class="clear"></div>
 			</footer>
-		</section>
-		
-		<footer id="footer">
+	
 				<!-- LISTENER footer_top -->
 				<div class="portal_block2">{PORTAL_BLOCK2}</div>
 				{EQDKP_PLUS_COPYRIGHT}
 				<!-- LISTENER footer_bottom -->
 		</footer><!-- close footer -->
-	</div><!-- close wrapper -->
 	
 	<!-- ELSE -->
 		<!-- IF S_SHOW_QUERIES --><br />{DEBUG_TABS}<!-- ENDIF -->
