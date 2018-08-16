@@ -2818,9 +2818,17 @@ td.hiddenSmartphone, th.hiddenSmartphone {
 a.tool-item {
 	font-size: 18px;
 	font-weight: normal;
-	height: 34px;
-	line-height: 34px;
+	height: 20px;
+	line-height: 18px;
 	color: #000;
+}
+
+.tool-item.selected, .tool-item:hover {
+	background: #000;
+}
+
+.tool-container {
+	background: #333;
 }
 
 /* Notifications */
