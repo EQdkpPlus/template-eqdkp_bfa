@@ -1421,7 +1421,9 @@ div[aria-describedby="dialog-login"] .password-forgot{
 	color: #000000;
 }
 
-
+.infobox a {
+	color: #000;
+}
 /* Pagination
 ****************************************/
 div.pagination li {
