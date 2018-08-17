@@ -507,7 +507,7 @@ h3 { font-size: 14px; margin-bottom: 5px; border-bottom: none; }
 /* Menus
 ****************************************/
 #mainmenu, #adminmenu {
-	background: url('@{eqdkpTemplateImagePath}navbar-light-middle-admin.png') repeat-x scroll center center / auto 70px transparent;
+	background: url('@{eqdkpTemplateImagePath}navbar-light-middle.png') repeat-x scroll center center / auto 70px transparent;
 	position: relative;
 	margin: 0 70px;
 	padding: 10px 0;
@@ -1505,7 +1505,7 @@ hr#system-readmore {
 .admin .breadcrumb { border-radius:0; }
 
 .breadcrumb-container {
-	background: url('@{eqdkpTemplateImagePath}nav-m.png') repeat-x scroll center center / auto 50px transparent;
+	background: url('@{eqdkpTemplateImagePath}navbar-dark-middle.png') repeat-x scroll center center / auto 50px transparent;
 	position: relative;
 	margin: 0 20px;
 	padding: 10px 0;
@@ -1521,12 +1521,12 @@ hr#system-readmore {
 		bottom: 0;
 	}
 	&:before {
-		background: url('@{eqdkpTemplateImagePath}nav-l.png') no-repeat scroll center center / auto 50px transparent;
+		background: url('@{eqdkpTemplateImagePath}navbar-dark-left.png') no-repeat scroll center center / auto 50px transparent;
 		left: 0;
 		margin-left: -20px;
 	}
 	&:after {
-		background: url('@{eqdkpTemplateImagePath}nav-r.png') no-repeat scroll center center / auto 50px transparent;
+		background: url('@{eqdkpTemplateImagePath}navbar-dark-right.png') no-repeat scroll center center / auto 50px transparent;
 		right: 0;
 		margin-right: -20px;
 	}
