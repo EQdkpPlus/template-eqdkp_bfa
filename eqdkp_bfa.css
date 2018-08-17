@@ -1819,7 +1819,7 @@ ul.breadcrumb .current::before {
 }
 
 .sortable li.mjs-nestedSortable-branch div, .sortable li.mjs-nestedSortable-leaf div {
-    background: url('@{eqdkpTemplateImagePath}table_bg_tile.png') repeat scroll 0% 0% #190A09;
+    background: url('@{eqdkpTemplateImagePath}steel.png') repeat scroll 0% 0% #190A09;
     border-color: #666;
 }
 .sortable li.mjs-nestedSortable-branch div .fa-trash-o:before, .sortable li.mjs-nestedSortable-leaf div .fa-trash-o:before {
