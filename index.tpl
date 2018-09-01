@@ -251,11 +251,11 @@
 					</div><!-- close mainmenu -->
 					
 					<!-- IF S_IN_ADMIN -->
-					<div id="adminmenu">
-						<div class="hiddenSmartphone">
+					<div class="hiddenSmartphone">
+						<div id="adminmenu">
 							{ADMIN_MENU}
+							<!-- LISTENER adminmenu -->
 						</div>
-						<!-- LISTENER adminmenu -->
 					</div>
 					<!-- ENDIF -->
 					
