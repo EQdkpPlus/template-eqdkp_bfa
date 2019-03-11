@@ -3440,6 +3440,11 @@ button#cboxPrevious, button#cboxNext, button#cboxClose, button#cboxSlideshow {
 	
 	.responsive #mainmenu {
 		margin: 0;
+		
+		&:before,
+		&:after {
+			display: none;
+		}
 	}
 	
 	.responsive .mainmenu i {
