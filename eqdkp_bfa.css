@@ -2810,7 +2810,7 @@ td.hiddenSmartphone, th.hiddenSmartphone {
 	max-height: 48px;
 }
 
-.user-avatar-small, .user-avatar-small img {
+.user-avatar-small, .user-avatar-small, .user-avatar.small {
 	max-height: 32px;
 }
 
@@ -2818,7 +2818,7 @@ td.hiddenSmartphone, th.hiddenSmartphone {
 	max-height: 24px;
 }
 
-.user-avatar-border img {
+img.user-avatar, .user-avatar img {
 	border: 1px solid #CEC5AF;
 	background-color: #999;
 }
@@ -4211,21 +4211,28 @@ button.thirdpartylogin.discord {
 }
 
 .list-type4 {
-	display:flex;
+	display:flex; 
 	flex-wrap: wrap;
 }
 
 .article-container.list-type4 {
-	width: 500px;
+	width: 500px; 
 	margin-right:20px;
 	background-color: @eqdkpContentContrastBackgroundColor;
+	flex-grow: 1;
+	display: block;
 }
 
 .list-type4 .article-banner-image {
-	align-items:center;
-	display:flex;
-	max-height:160px;
 	overflow:hidden;
+}
+
+.list-type4 .article-banner-image a {
+	display: block;
+	height: 160px;
+	background-position: center center;
+  	background-repeat: no-repeat;
+  	background-size: cover;
 }
 
 .list-type4 .news_author {
@@ -4238,7 +4245,6 @@ button.thirdpartylogin.discord {
 .list-type4 .article_content {
 	padding: 0px 10px 5px 10px;
 }
-
 /* Ribbons */
 @ribbon: fadein(@eqdkpContentHighlightColor,80);
 @featuredColor: gold;
